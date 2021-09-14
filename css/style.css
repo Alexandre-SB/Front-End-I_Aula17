@@ -1,0 +1,120 @@
+/*
+- Agradeço ao Luiz Henrique pela orientação passada em relação à movimentação do ícone "Gastly" e ao Pedro Henrique Cardoso por outras dicas valiosas. Muito obrigado!!!
+*/
+
+* {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1280px;
+        margin: 10px auto;
+        }
+}
+
+.ball {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    background-color: rgb(75, 17, 90);
+    border-radius: 50%;
+    animation: ball-loop 30s infinite;
+}
+
+.icon-container {
+    animation: gastly 2s infinite;
+
+}
+
+@keyframes gastly {
+      
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(250px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.icon {
+    width: 10rem;
+    transition: all 0.5s ease-in-out;
+    animation: icon-loop 1.5s;
+        {
+        width: 100%;
+        height: 10px;
+        color: skyblue;
+        text-align: center;
+        animation: animated 0.5s infinite;
+    }
+    .icone i {
+        font-size: 5px;
+    }
+}
+
+.icon:hover {
+    filter: saturate(150%);
+    transform: scale(5.0);
+}
+
+.button-container {
+    margin-top: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: max-content;
+    padding: 1rem;
+    border-radius: 4%;
+    background-color: #e0c8e7;
+    color: rgb(57, 47, 59);
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: rgb(161, 102, 163);
+    cursor: all-scroll;
+}
+
+@keyframes icon-loop {
+    0% {
+        transform: translateX(-100%) rotate(180deg) scale(50);
+    }
+    50% {
+        transform: rotate(360deg) scale(0.7);
+    }
+    100% {
+        transform: translateX(0) rotate(0) scale(1);
+    }
+}
+
+@keyframes ball-loop {
+    0% {
+        margin-left: 0;
+        filter: hue-rotate(0);
+        opacity: 0.1;
+    }
+    10% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    30% {
+        opacity: 0.6;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    50% {
+        margin-left: 100%;
+        filter: hue-rotate(360deg);
+        opacity: 1;
+    }
+}
